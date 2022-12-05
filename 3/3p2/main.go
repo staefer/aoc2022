@@ -18,10 +18,9 @@ func main() {
 		line := fileScanner.Text()
 		if line != "" {
 			lhs, rhs := splitInHalf(line)
-			fmt.Println(line)
-			fmt.Println(lhs, rhs)
 			duplicate := findDoubleItem(lhs, rhs)
 			sum += calcPrio(duplicate)
+			fmt.Println("Duplicate: ", duplicate, " Priority: ", calcPrio(duplicate))
 		}
 	}
 
@@ -35,15 +34,12 @@ func errCheck(err error) {
 }
 
 func splitInHalf(str string) (string, string) {
-	if len(str)%2 != 0 {
-		fmt.Println("NOT EVEN LMAo")
-	}
-	lhs := str[0 : len(str)/2]
-	rhs := str[len(str)/2 : len(str)]
+	lhs := str[0 : (len(str)/2)-1]
+	rhs := str[(len(str) / 2) : len(str)-1]
 	if len(lhs) == len(rhs) {
 		return lhs, rhs
 	} else {
-		panic("splitInHalf: result is not the same size")
+		panic("splitInHalf no the same size")
 	}
 }
 
