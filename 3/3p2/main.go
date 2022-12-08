@@ -13,15 +13,22 @@ func main() {
 	fileScanner := bufio.NewScanner(readFile)
 	fileScanner.Split(bufio.ScanLines)
 
-	var sum int
+	var elf1 string
+	var elf2 string
+	var elf3 string
+
+	var sum int = 0
 	for fileScanner.Scan() {
-		line := fileScanner.Text()
-		if line != "" {
-			lhs, rhs := splitInHalf(line)
-			duplicate := findDoubleItem(lhs, rhs)
-			sum += calcPrio(duplicate)
-			fmt.Println("Duplicate: ", duplicate, " Priority: ", calcPrio(duplicate))
-		}
+		elf1 = fileScanner.Text()
+
+		fileScanner.Scan()
+		elf2 = fileScanner.Text()
+
+		fileScanner.Scan()
+		elf3 = fileScanner.Text()
+
+		commonItem := findCommonItem(elf1, elf2, elf3)
+		sum += calcPrio(commonItem)
 	}
 
 	fmt.Println(sum)
@@ -30,16 +37,6 @@ func main() {
 func errCheck(err error) {
 	if err != nil {
 		panic("Error found")
-	}
-}
-
-func splitInHalf(str string) (string, string) {
-	lhs := str[0 : (len(str)/2)-1]
-	rhs := str[(len(str) / 2) : len(str)-1]
-	if len(lhs) == len(rhs) {
-		return lhs, rhs
-	} else {
-		panic("splitInHalf no the same size")
 	}
 }
 
@@ -60,16 +57,22 @@ func calcPrio(item string) int {
 	panic("Couldn't calculate priority")
 }
 
-func findDoubleItem(lhs string, rhs string) string {
-	lhsSplice := strings.Split(lhs, "")
-	rhsSplice := strings.Split(rhs, "")
-	for _, lhsItem := range lhsSplice {
-		for _, rhsItem := range rhsSplice {
-			if lhsItem == rhsItem {
-				return lhsItem
+func findCommonItem(elf1 string, elf2 string, elf3 string) string {
+	elf1_splice := strings.Split(elf1, "")
+	elf2_splice := strings.Split(elf2, "")
+	elf3_splice := strings.Split(elf3, "")
+
+	for _, item1 := range elf1_splice {
+		for _, item2 := range elf2_splice {
+			if item1 == item2 {
+				for _, item3 := range elf3_splice {
+					if item1 == item3 {
+						return item3
+					}
+				}
 			}
 		}
 	}
 
-	return ""
+	panic("No common element")
 }
