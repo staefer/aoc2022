@@ -1,0 +1,15 @@
+C:\Projects\AOC2022\6\6p1\obj\Debug\net6.0\6p1.csproj.AssemblyReference.cache
+C:\Projects\AOC2022\6\6p1\obj\Debug\net6.0\6p1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\AOC2022\6\6p1\obj\Debug\net6.0\6p1.AssemblyInfoInputs.cache
+C:\Projects\AOC2022\6\6p1\obj\Debug\net6.0\6p1.AssemblyInfo.cs
+C:\Projects\AOC2022\6\6p1\obj\Debug\net6.0\6p1.csproj.CoreCompileInputs.cache
+C:\Projects\AOC2022\6\6p1\bin\Debug\net6.0\6p1.exe
+C:\Projects\AOC2022\6\6p1\bin\Debug\net6.0\6p1.deps.json
+C:\Projects\AOC2022\6\6p1\bin\Debug\net6.0\6p1.runtimeconfig.json
+C:\Projects\AOC2022\6\6p1\bin\Debug\net6.0\6p1.dll
+C:\Projects\AOC2022\6\6p1\bin\Debug\net6.0\6p1.pdb
+C:\Projects\AOC2022\6\6p1\obj\Debug\net6.0\6p1.dll
+C:\Projects\AOC2022\6\6p1\obj\Debug\net6.0\refint\6p1.dll
+C:\Projects\AOC2022\6\6p1\obj\Debug\net6.0\6p1.pdb
+C:\Projects\AOC2022\6\6p1\obj\Debug\net6.0\6p1.genruntimeconfig.cache
+C:\Projects\AOC2022\6\6p1\obj\Debug\net6.0\ref\6p1.dll
